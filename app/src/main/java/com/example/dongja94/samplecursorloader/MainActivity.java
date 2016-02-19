@@ -60,12 +60,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         keywordView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                mKeyword = s.toString();
-                getSupportLoaderManager().restartLoader(0, null, MainActivity.this);
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mKeyword = s.toString();
+                getSupportLoaderManager().restartLoader(0, null, MainActivity.this);
             }
 
             @Override
